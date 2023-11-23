@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body {
+    background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+body::before {
+    background-image: url("img/code.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+.container {
+    width: 75%;
+    height: 85%;
+    display: flex;
+    border-radius: 2vw; /* Utilizando vw para borda arredondada */
+    border: 0.1vw solid #1875E8; /* Utilizando vw para borda e valor mais leve */
+    box-shadow: 0.4vw 0.4vw 2vw 0px rgba(1, 8, 14, 0.15); /* Utilizando vw para sombra e valor mais leve */
+    position: relative;
+}
+
+.container img {
+    border-radius: 0px 30px 30px 0px;
+    box-shadow: #000000;
+    background: #000000;
+}
+
+.left-side, .right-side {
+    flex: 1;
+    height: 100%;
+    overflow: hidden;
+}
+
+.left-side {
+    background-image: url("img/time.gif");
+    background-size: 80% 92%;
+    background-position: center -240%; /* Utilizando vw para ajuste vertical */
+    border-radius: 2vw 0vw 0vw 2vw; /* Utilizando vw para borda arredondada */
+}
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2vw; /* Utilizando vw para padding */
+}
+
+.right-side img {
+    width: 100%;
+    border-radius: 1.2vw; /* Utilizando vw para borda arredondada */
+    margin-bottom: 1vw; /* Utilizando vw para margem inferior */
+}
+
+.container__conteudo {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+}
+
+.container__informacoes {
+    flex: 1;
+    padding: 3vw; /* Utilizando vw para padding */
+}
+
+.container__botao {
+    border-radius: 1.6vw; /* Utilizando vw para borda arredondada */
+    background: #0051ff;
+    padding: 0.8vw 5vw; /* Utilizando vw para padding */
+    width: 150%;
+    font-size: 1.5vw; /* Utilizando vw para tamanho de fonte */
+    font-weight: 700;
+    border: none;
+    margin-top: 2vw; /* Utilizando vw para margem superior */
+}
+
+.container__texto {
+    margin: 1.6vw 0 1.6vw 0; /* Utilizando vw para margem */
+}
+
+.container__texto-azul {
+    color: #0073ff;
+}
+
+.container__input {
+    width: 43%;
+    height: 2vw; /* Utilizando vw para altura */
+    border-radius: 1.6vw; /* Utilizando vw para borda arredondada */
+    background-color: #FFF;
+    border: none;
+    color: #1875E8;
+    padding: 2vw; /* Utilizando vw para padding */
+    font-size: 2.4vw; /* Utilizando vw para tamanho de fonte */
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    margin-right: 2vw;
+}
+
+.container__botoes {
+    width: 90%;
+    display: flex;
+    gap: 2vw; /* Utilizando vw para espaçamento entre botões */
+}
+
+h1 {
+    font-family: 'Press Start 2P', sans-serif;
+    font-size: 2.3vw; /* Utilizando vw para tamanho de fonte */
+    padding-bottom: 1vw; /* Utilizando vw para padding */
+}
+
+p, button {
+    font-family: 'Inter', sans-serif;
+}
+
+.texto__paragrafo {
+    font-size: 1.8vw; /* Utilizando vw para tamanho de fonte */
+    font-weight: 700;
+    padding-bottom: 0;
+}
+
+button:disabled {
+    background-color: gray;
+}
+
+@media screen and (max-width: 1250px) {
+    h1 {
+        font-size: 5vw; /* Utilizando vw para tamanho de fonte em telas menores */
+    }
+
+    .container__botao {
+        font-size: 1vw; /* Utilizando vw para tamanho de fonte em telas menores */
+    }
+
+    .texto__paragrafo {
+        font-size: 2.4vw; /* Utilizando vw para tamanho de fonte em telas menores */
+    }
+
+    .container__imagem-pessoa {
+        display: none;
+    }
+
+    .container__conteudo {
+        display: block;
+        position: inherit;
+    }
+
+    .container__informacoes {
+        padding: 1vw; /* Utilizando vw para padding em telas menores */
+    }
+}
